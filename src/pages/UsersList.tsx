@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { useQuery } from "react-query"
-import UserCard from "../components/common/UserCard"
 import Pagination from "@mui/material/Pagination"
-import { getUsers } from "../hooks/useAxios"
 import { Grid } from "@mui/material"
+import UserCard from "../components/common/UserCard"
+import { getUsers } from "../hooks/useAxios"
 import Layout from "../components/layout"
 
 const UsersList = () => {
