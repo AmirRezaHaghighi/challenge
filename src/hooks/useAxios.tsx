@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from "axios"
-import { PaginationDTO, User, UserInfo, Userdetail } from "../types/userTypes"
+import { PaginationDTO, User, UserInfo, userDetail } from "../types/userTypes"
 
 const instance: AxiosInstance = axios.create({
   baseURL: "https://reqres.in/api",
@@ -19,7 +19,7 @@ export const getUser = async (userId: string | undefined) => {
     return null
   }
   return instance
-    .get<Userdetail>(`/users/${userId}`)
+    .get<userDetail>(`/users/${userId}`)
     .then((res) => res.data.data)
 }
 

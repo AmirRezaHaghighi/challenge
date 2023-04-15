@@ -41,7 +41,7 @@ const User = () => {
   }
 
   const goBack = () => {
-    navigate(-1)
+    navigate("/users")
   }
 
   return (

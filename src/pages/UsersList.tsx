@@ -21,7 +21,6 @@ const UsersList = () => {
     return <h2>Loading....</h2>
   }
   const handleChange = (event: any, value: number) => {
-    console.log(event)
     setPage(value)
   }
 

@@ -13,7 +13,7 @@ export interface User {
   last_name: string
   avatar: string
 }
-export interface Userdetail {
+export interface userDetail {
   data: {
     id: string
     email: string

@@ -1,9 +1,9 @@
 import { Outlet, Navigate } from "react-router-dom"
-import { loadData } from "../utils/localStorage"
+import useIsAuthenticated from "../hooks/useIsAuthenticated"
 
 const PrivateRoutes = () => {
-  let token = loadData("token")
-  return token ? <Outlet /> : <Navigate to="/login" />
+  let isAuthenticated = useIsAuthenticated()
+  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />
 }
 
 export default PrivateRoutes
