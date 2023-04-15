@@ -1,0 +1,68 @@
+{
+  "plugins": ["prettier", "@typescript-eslint"],
+  "extends": [
+    "airbnb-typescript",
+    "react-app",
+    "plugin:prettier/recommended",
+    "plugin:sonarjs/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["**/tsconfig.json"]
+  },
+  "ignorePatterns": [
+    "build/*",
+    "public/*",
+    "src/react-app-env.d.ts",
+    "src/reportWebVitals.ts",
+    "src/service-worker.ts",
+    "src/serviceWorkerRegistration.ts",
+    "src/setupTests.ts",
+    "node_modules/",
+    ".snapshots/",
+    "*.min.js"
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    // Sonar Lint
+    "sonarjs/no-duplicate-string": 1,
+    "no-console": "warn",
+    "react/jsx-key": 2,
+    "arrow-body-style": 1,
+    "import/no-duplicates": 1,
+    "react/self-closing-comp": 1,
+    "@typescript-eslint/no-shadow": 0,
+    "import/no-useless-path-segments": 1,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-anonymous-default-export": 0,
+    "@typescript-eslint/naming-convention": 0,
+    "prettier/prettier": ["warn"],
+    "object-curly-spacing": [1, "always"],
+    "@typescript-eslint/no-unused-vars": [
+      1,
+      {
+        "vars": "all",
+        "args": "none"
+      }
+    ],
+    "prefer-destructuring": [
+      1,
+      {
+        "object": true,
+        "array": false
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external", "internal"]]
+      }
+    ]
+  }
+}
